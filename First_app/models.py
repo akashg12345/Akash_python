@@ -28,16 +28,16 @@ class Student(models.Model):
     def __str__(self) :
         return f"{self.name}"
 
-# ### calculate average marks using reduce()  function
+### calculate average marks using reduce()  function
  
-#     @classmethod
-#     def average_of_marks(cls):
-#         l = []
-#         data = cls.objects.all()
-#         for i in data:
-#             l.append(i.marks)
-#         average = reduce(lambda x,y:x+y,l)/len(data)
-#         return average
+    @classmethod
+    def average_of_marks(cls):
+        l = []
+        data = cls.objects.all()
+        for i in data:
+            l.append(i.marks)
+        average = reduce(lambda x,y:x+y,l)/len(data)
+        return average
 
 # ### increments of marks by 15 percent and keep unchange for those crossing 100 percent after increament
 
